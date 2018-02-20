@@ -11,8 +11,8 @@
 
     <title>Paulfolio</title>
 
-    <!-- Jquery Script -->
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <!-- AngularJs Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -25,53 +25,18 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
-    <!-- Include Script -->
-     <script> 
-    $(function(){
-        $("#Navigation").load("_navigation.html");
-        $("#Header").load("_header.html");
-        $("#Grid").load("_grid.html");
-        $("#Modal").load("_modal.html");
-        $("#About").load("_about.html");
-        $("#Contact").load("_contact.html");
-        $("#Footer").load("_footer.html");  
-    });
-    </script>
-
 </head>
 
-<body id="page-top" class="index">
-
-    <!-- Navigation -->
-    <!-- Included _navigation.html -->
-    <div id="Navigation"></div>
-
-    <!-- Header -->
-    <!-- Included _header.html -->
-    <div id="Header"></div>
-
-    <p>Test Text</p>
-
-    <!-- Grid -->
-    <!-- Included _grid.html -->
-    <div id="Grid"></div>
-
-    <!-- Modal -->
-    <!-- Included _modal.html -->
-    <div id="Modal"></div>
-
-    <!-- About -->
-    <!-- Included _contact.html -->
-    <div id="About"></div>
-
-    <!-- Contact -->
-    <!-- Included _contact.html -->
-    <div id="Contact"></div>
-   
-    <!-- Footer -->
-    <!-- Included _footer.html -->
-    <div id="Footer"></div>
+<body id="page-top" class="index" ng-app="">
     
+    <!-- Angular Include -->
+    <div ng-include="'_navigation.html'"></div>
+    <div ng-include="'_header.html'"></div>
+    <div ng-include="'_grid.html'"></div>
+    <div ng-include="'_modals.html'"></div>
+    <div ng-include="'_about.html'"></div>
+    <div ng-include="'_contact.html'"></div>
+    <div ng-include="'_footer.html'"></div>
 
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
     <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
@@ -95,6 +60,7 @@
 
     <!-- Theme JavaScript -->
     <script src="js/freelancer.min.js"></script>
+
 
 </body>
 
